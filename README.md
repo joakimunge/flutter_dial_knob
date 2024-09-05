@@ -1,9 +1,10 @@
 # Knob
 
-A customizable knob widget for Flutter.
+A customizable dial knob widget for Flutter.
 
 ## Features
 
+- Dart 3 Compatible
 - Customizable colors for track, level, knob, and indicator
 - Gradient support for level indicator
 - Adjustable size

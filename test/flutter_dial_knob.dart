@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_dial_knob/flutter_dial_knob.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:knob/knob.dart';
 
 void main() {
   testWidgets('Knob widget has correct initial value',
@@ -8,7 +8,7 @@ void main() {
     await tester.pumpWidget(
       MaterialApp(
         home: Scaffold(
-          body: Knob(
+          body: DialKnob(
             value: 0.5,
             onChanged: (value) {},
           ),
@@ -16,18 +16,18 @@ void main() {
       ),
     );
 
-    final knobFinder = find.byType(Knob);
+    final knobFinder = find.byType(DialKnob);
     expect(knobFinder, findsOneWidget);
   });
 
-  testWidgets('Knob calls onChanged after drag down gesture',
+  testWidgets('DialKnob calls onChanged after drag down gesture',
       (WidgetTester tester) async {
     double knobValue = 0.0;
 
     await tester.pumpWidget(
       MaterialApp(
         home: Scaffold(
-          body: Knob(
+          body: DialKnob(
             value: knobValue,
             min: 0,
             max: 1,
@@ -39,7 +39,7 @@ void main() {
       ),
     );
 
-    final knobFinder = find.byType(Knob);
+    final knobFinder = find.byType(DialKnob);
 
     expect(knobFinder, findsOneWidget);
     expect(knobValue, 0.0);

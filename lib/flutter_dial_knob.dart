@@ -22,7 +22,7 @@ import 'package:flutter/material.dart';
 ///   indicatorColor: Colors.red,
 /// )
 /// ```
-class Knob extends StatefulWidget {
+class DialKnob extends StatefulWidget {
   final double value;
   final ValueChanged<double> onChanged;
   final double min;
@@ -36,7 +36,7 @@ class Knob extends StatefulWidget {
   final Color? knobColor;
   final Color? indicatorColor;
 
-  const Knob({
+  const DialKnob({
     super.key,
     required this.value,
     required this.onChanged,
@@ -53,10 +53,10 @@ class Knob extends StatefulWidget {
   });
 
   @override
-  State<Knob> createState() => KnobState();
+  State<DialKnob> createState() => DialKnobState();
 }
 
-class KnobState extends State<Knob> {
+class DialKnobState extends State<DialKnob> {
   double _currentValue = 0;
 
   @override

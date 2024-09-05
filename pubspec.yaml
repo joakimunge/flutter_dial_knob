@@ -1,7 +1,7 @@
-name: knob
-description: 'A customizable, rotatable knob widget for Flutter.'
+name: flutter_dial_knob
+description: 'A customizable, rotatable dial knob widget for Flutter.'
 version: 0.0.1
-repository: 'https://github.com/joakimunge/flutter_knob'
+repository: 'https://github.com/joakimunge/flutter_dial_knob'
 
 environment:
   sdk: ^3.5.0
