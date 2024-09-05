@@ -15,7 +15,7 @@ Add this to your `pubspec.yaml` file:
 
 ```yaml
 dependencies:
-  knob: ^0.0.1
+  flutter_dial_knob: ^0.0.1
 ```
 
 Then run:
@@ -27,7 +27,7 @@ flutter pub get
 or
 
 ```
-$ flutter pub add knob
+$ flutter pub add flutter_dial_knob
 ```
 
 ## Usage
@@ -35,14 +35,14 @@ $ flutter pub add knob
 Import the package in your Dart file:
 
 ```dart
-import 'package:knob/knob.dart';
+import 'package:flutter_dial_knob/flutter_dial_knob.dart';
 ```
 
-Use the `Knob` widget in your Flutter app:
+Use the `DialKnob` widget in your Flutter app:
 
 ```dart
 import 'package:flutter/material.dart';
-import 'package:knob/knob.dart';
+import 'package:flutter_dial_knob/flutter_dial_knob.dart';
 
 void main() {
   runApp(MyApp());
@@ -54,10 +54,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text('Knob Example'),
+          title: Text('Dial Knob Example'),
         ),
         body: Center(
-          child: Knob(
+          child: DialKnob(
             value: 0.5,
             onChanged: (newValue) {
               print(newValue);
@@ -96,7 +96,7 @@ class MyApp extends StatelessWidget {
 ## Example
 
 ```dart
-Knob(
+DialKnob(
   value: 0.5,
   onChanged: (newValue) {
     print(newValue);

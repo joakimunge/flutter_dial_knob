@@ -8,7 +8,7 @@ import 'package:flutter/material.dart';
 ///
 /// Example usage:
 /// ```dart
-/// Knob(
+/// DialKnob(
 ///   value: 0.5,
 ///   onChanged: (newValue) {
 ///     print('New value: $newValue');
