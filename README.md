@@ -2,6 +2,8 @@
 
 A customizable dial knob widget for Flutter.
 
+![screenshot](doc/demo.png)
+
 ## Features
 
 - Dart 3 Compatible
@@ -15,7 +17,7 @@ Add this to your `pubspec.yaml` file:
 
 ```yaml
 dependencies:
-  flutter_dial_knob: ^0.0.1
+  flutter_dial_knob: ^0.0.2
 ```
 
 Then run:

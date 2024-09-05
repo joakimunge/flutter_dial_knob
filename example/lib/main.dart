@@ -15,7 +15,7 @@ class DialKnobExampleApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: DialKnobExamplePage(),
+      home: const DialKnobExamplePage(),
     );
   }
 }
