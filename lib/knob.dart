@@ -138,7 +138,6 @@ class _KnobPainter extends CustomPainter {
     _drawIndicator(canvas, center, radius, angle);
   }
 
-  /// Draws the track arc of the knob.
   void _drawTrack(Canvas canvas, Offset center, double radius) {
     final trackPaint = Paint()
       ..color = trackColor
@@ -155,7 +154,6 @@ class _KnobPainter extends CustomPainter {
     );
   }
 
-  /// Draws the level arc of the knob.
   void _drawLevel(Canvas canvas, Offset center, double radius, double angle) {
     Paint levelPaint;
 
@@ -186,7 +184,6 @@ class _KnobPainter extends CustomPainter {
     );
   }
 
-  /// Draws the knob circle.
   void _drawKnob(Canvas canvas, Offset center, double radius) {
     final knobPaint = Paint()
       ..color = knobColor
@@ -195,7 +192,6 @@ class _KnobPainter extends CustomPainter {
     canvas.drawCircle(center, radius - 6, knobPaint);
   }
 
-  /// Draws the indicator circle on the knob.
   void _drawIndicator(
       Canvas canvas, Offset center, double radius, double angle) {
     final indicatorPaint = Paint()
