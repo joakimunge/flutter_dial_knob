@@ -88,15 +88,12 @@ class KnobState extends State<Knob> {
           value: _currentValue,
           min: widget.min,
           max: widget.max,
-          trackColor: widget.trackColor ??
-              Theme.of(context).colorScheme.onSurfaceVariant,
+          trackColor: widget.trackColor ?? Colors.black54,
           levelColorStart: widget.levelColorStart,
           levelColorEnd: widget.levelColorEnd,
           levelColor: widget.levelColor ?? Colors.blue,
-          knobColor: widget.knobColor ??
-              Theme.of(context).colorScheme.surfaceContainer,
-          indicatorColor: widget.indicatorColor ??
-              Theme.of(context).colorScheme.inverseSurface,
+          knobColor: widget.knobColor ?? Colors.black87,
+          indicatorColor: widget.indicatorColor ?? Colors.white,
         ),
       ),
     );
