@@ -35,6 +35,7 @@ class DialKnob extends StatefulWidget {
   final Color? levelColor;
   final Color? knobColor;
   final Color? indicatorColor;
+  final DragDirection dragDirection;
 
   const DialKnob({
     super.key,
@@ -50,6 +51,7 @@ class DialKnob extends StatefulWidget {
     this.levelColor,
     this.knobColor,
     this.indicatorColor,
+    this.dragDirection = DragDirection.vertical,
   });
 
   @override
@@ -66,16 +68,24 @@ class DialKnobState extends State<DialKnob> {
   }
 
   void _onPanUpdate(DragUpdateDetails details) {
-    if (details.delta.dy.abs() > details.delta.dx.abs()) {
-      final dy = details.delta.dy;
-      final newValue = _currentValue - dy * (widget.max - widget.min) / 100;
-      setState(() {
-        _currentValue = newValue <= widget.min
-            ? widget.min
-            : newValue.clamp(widget.min, widget.max);
-      });
-      widget.onChanged(_currentValue);
+    final dx = details.delta.dx;
+    final dy = details.delta.dy;
+    double delta;
+    switch (widget.dragDirection) {
+      case DragDirection.vertical:
+        delta = dy;
+      case DragDirection.horizontal:
+        delta = -dx;
+      case DragDirection.both:
+        delta = -dx + dy;
     }
+    final newValue = _currentValue - delta * (widget.max - widget.min) / 100;
+    setState(() {
+      _currentValue = newValue <= widget.min
+          ? widget.min
+          : newValue.clamp(widget.min, widget.max);
+    });
+    widget.onChanged(_currentValue);
   }
 
   @override
@@ -213,3 +223,5 @@ class _KnobPainter extends CustomPainter {
     return true;
   }
 }
+
+enum DragDirection { vertical, horizontal, both }
