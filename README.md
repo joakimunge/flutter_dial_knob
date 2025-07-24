@@ -94,6 +94,7 @@ class MyApp extends StatelessWidget {
 - `levelColor`: Solid color of the level.
 - `knobColor`: Color of the knob.
 - `indicatorColor`: Color of the indicator.
+- `dragDirection`: Axis that interacts with the knob (default is vertical).
 
 ## Example
 
@@ -111,6 +112,7 @@ DialKnob(
   levelColorEnd: Colors.red,
   knobColor: Colors.blue,
   indicatorColor: Colors.white,
+  dragDirection: DragDirection.horizontal,
 )
 ```
 
