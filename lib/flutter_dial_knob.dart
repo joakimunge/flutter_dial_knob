@@ -67,6 +67,14 @@ class DialKnobState extends State<DialKnob> {
     _currentValue = widget.value;
   }
 
+  @override
+  void didUpdateWidget(covariant DialKnob oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    if (widget.value != oldWidget.value) {
+      _currentValue = widget.value;
+    }
+  }
+
   void _onPanUpdate(DragUpdateDetails details) {
     final dx = details.delta.dx;
     final dy = details.delta.dy;
